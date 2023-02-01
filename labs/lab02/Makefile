@@ -21,7 +21,7 @@ LFSR_PROG = lfsr
 VECTOR_OBJS=vector.o vector_test.o
 VECTOR_PROG=vector_test
 
-BINARIES=$(VECTOR_PROG) $(BIT_OPS_PROG) $(LFSR_PROG)
+BINARIES=$(VECTOR_PROG) $(BIT_OPS_PROG) $(LFSR_PROG) 
 
 all: $(BINARIES)
 

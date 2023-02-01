@@ -1,7 +1,7 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+1. clean
+2. all
+3. Gcc
+4. C99
+5. $(FOO)
+6. Core Unix System for MaxOS, iOS and all other apple related OS
+7. Line 31
