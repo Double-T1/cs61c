@@ -14,7 +14,7 @@ end_msg:    .asciiz "Lists after: \n"
 main:
     jal create_default_list
     mv s0, a0   # v0 = s0 is head of node list
-
+    
     #print "lists before: "
     la a1, start_msg
     li a0, 4
@@ -46,10 +46,11 @@ main:
     ecall
 
 map:
-    addi sp, sp, -12
-    sw ra, 0(sp)
-    sw s1, 4(sp)
-    sw s0, 8(sp)
+    #callee saved
+    addi sp, sp, -12 # extend the stack frame
+    sw ra, 0(sp) # push return address of the previous onto stack
+    sw s1, 4(sp) # push s1(the function pointer) of the previous onto stack
+    sw s0, 8(sp) # push the first arguement(the pointer to the current node) of the previous onto stack
 
     beq a0, x0, done    # if we were given a null pointer, we're done.
 
